@@ -1,0 +1,23 @@
+<% layout('./layouts/layout.eta') %>
+
+<h1>Questions and answers!</h1>
+
+<% if (it.question && it.question.question_text) { %>
+  <%= it.question.question_text %>
+  <ul>
+    <% if (it.answers && it.answers.length > 0) { %>
+      <% it.answers.forEach(answer => { %>
+        <li>
+          <%= answer.option_text %>
+          <form method="POST" action="/quiz/<%= it.question.topic_id%>/questions/<%= it.question.id %>/options/<%= answer.id %>">
+            <input type="submit" value="Choose" style="background-color: #7986cb;"/>
+          </form>
+        </li>
+      <% }); %>
+    <% } else { %>
+      <p>No answers available.</p>
+    <% } %>
+  </ul>
+<% } else { %>
+  <p>No questions available.</p>
+<% } %>

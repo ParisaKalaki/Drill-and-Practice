@@ -1,0 +1,14 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1>Drill-And-Practice application</h1>
+
+<p>This application is a web-based platform designed to facilitate learning through quizzes and topic-based questions. Users can create topics, add questions, and participate in quizzes to test their knowledge. The application follows a three-tier architecture, with a client-side interface, server-side logic, and a database to store information securely.</p>
+
+<p>If you haven't used the application before, you can start by <a href="/auth/register">registering</a>. If you have been here before, just <a href="/auth/login">log in</a>!</p>
+
+<h1>Statistics!</h1>
+
+
+<h2>Total Number Of Topics: <%= it.totalNumberOfTopics %></h2>
+<h2>Total Number Of Questions: <%= it.totalNumberOfQuestions %></h2>
+<h2>Total Number Of Answers: <%= it.totalNumberOfAnswers %></h2>

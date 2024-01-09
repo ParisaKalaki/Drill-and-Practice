@@ -1,0 +1,11 @@
+import { clearTimes, dateChecks } from "../utils.ts";
+export function dateAfterOrEqual(date) {
+    return function dateAfterOrEqualRule(value) {
+        return dateChecks(value, "dateAfterOrEqual", {
+            date
+        }, (input)=>{
+            return clearTimes(input).getTime() >= clearTimes(date).getTime();
+        });
+    };
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImh0dHBzOi8vZGVuby5sYW5kL3gvdmFsaWRhc2F1ckB2MC4xNS4wL3NyYy9ydWxlcy9kYXRlX2FmdGVyX29yX2VxdWFsLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB0eXBlIHsgVmFsaWRpdHksIFJ1bGUgfSBmcm9tIFwiLi4vdHlwZXMudHNcIjtcbmltcG9ydCB7IGNsZWFyVGltZXMsIGRhdGVDaGVja3MgfSBmcm9tIFwiLi4vdXRpbHMudHNcIjtcblxuZXhwb3J0IGZ1bmN0aW9uIGRhdGVBZnRlck9yRXF1YWwoZGF0ZTogRGF0ZSk6IFJ1bGUge1xuICByZXR1cm4gZnVuY3Rpb24gZGF0ZUFmdGVyT3JFcXVhbFJ1bGUodmFsdWU6IGFueSk6IFZhbGlkaXR5IHtcbiAgICByZXR1cm4gZGF0ZUNoZWNrcyhcbiAgICAgIHZhbHVlLFxuICAgICAgXCJkYXRlQWZ0ZXJPckVxdWFsXCIsXG4gICAgICB7IGRhdGUgfSxcbiAgICAgIChpbnB1dDogRGF0ZSk6IGJvb2xlYW4gPT4ge1xuICAgICAgICByZXR1cm4gY2xlYXJUaW1lcyhpbnB1dCkuZ2V0VGltZSgpID49IGNsZWFyVGltZXMoZGF0ZSkuZ2V0VGltZSgpO1xuICAgICAgfSxcbiAgICApO1xuICB9O1xufVxuIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLFNBQVMsVUFBVSxFQUFFLFVBQVUsUUFBUSxjQUFjO0FBRXJELE9BQU8sU0FBUyxpQkFBaUIsSUFBVSxFQUFRO0lBQ2pELE9BQU8sU0FBUyxxQkFBcUIsS0FBVSxFQUFZO1FBQ3pELE9BQU8sV0FDTCxPQUNBLG9CQUNBO1lBQUU7UUFBSyxHQUNQLENBQUMsUUFBeUI7WUFDeEIsT0FBTyxXQUFXLE9BQU8sT0FBTyxNQUFNLFdBQVcsTUFBTSxPQUFPO1FBQ2hFO0lBRUo7QUFDRixDQUFDIn0=
