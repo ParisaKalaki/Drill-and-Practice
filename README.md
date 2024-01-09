@@ -27,10 +27,3 @@ To run the application locally, follow these steps:
    ```
 
 4. Open your browser and go to [http://localhost:7777](http://localhost:7777) to access the application.
-
-## Project Structure
-
-The project follows a modular structure:
-
-- **app.js**: Main entry point for the Oak application.
-- **run-locally.js**: Script for launching the app
